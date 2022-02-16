@@ -4,7 +4,7 @@ from urllib import request
 from django.shortcuts import render,redirect
 import csv 
 import codecs
-from crypto.models import cryptotable 
+from crypto.models import cryptotable,predicttable
 
 def index(request):
 
@@ -20,3 +20,10 @@ def CryptoView(request):
       'query_results' : query_results
     })
 
+def PredictView(request):
+    
+    query_predict_results = predicttable.objects.all()
+
+    return render(request,'crypto/table.html',{
+      'query_predict_results' : query_predict_results
+    })

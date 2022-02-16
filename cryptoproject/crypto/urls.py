@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('',views.CryptoView,name='all'),
-    path('test/',views.index)
+    path('predict/',views.PredictView)
 ]

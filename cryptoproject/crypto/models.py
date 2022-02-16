@@ -13,4 +13,12 @@ class cryptotable (models.Model):
     Volume = models.CharField(("Volume 24H") , max_length=255)
     Supply = models.CharField(("Available Supply") , max_length=255)
 
+class predicttable (models.Model):
+
+    id = models.IntegerField(primary_key=True)
+    
+    Crypto_Name  = models.CharField(("Crypto Name") , max_length=255)
+    Price = models.CharField(("Price"), max_length=255)
+    Marketcap = models.CharField(("Market Cap") , max_length=255)
+
 
