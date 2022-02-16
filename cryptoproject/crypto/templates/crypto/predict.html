@@ -18,18 +18,13 @@
             <th>Price</th>
             <th>Market Cap</th>
         </tr>
-        {% for item in query_results %}
+        {% for item in query_predict_results %}
         <tr> 
             <td>{{ item.id }}</td>
             <td>{{ item.Crypto_Name }}</td>  
             <td>{{ item.Price }}</td>
-            <td>{{ item.Change_24_H  }}</td>
-            <td>{{ item.Change_7_D  }}</td>
-            <td>{{ item.Change_30_D  }}</td>
-            <td>{{ item.Change_1_Y  }}</td>
             <td>{{ item.Marketcap  }}</td>
-            <td>{{ item.Volume  }}</td>
-            <td>{{ item.Supply  }}</td>
+
         </tr>
         {% endfor %}
     </table>

@@ -24,6 +24,6 @@ def PredictView(request):
     
     query_predict_results = predicttable.objects.all()
 
-    return render(request,'crypto/table.html',{
+    return render(request,'crypto/predict.html',{
       'query_predict_results' : query_predict_results
     })
